@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Mortgage Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/17be9efc7d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="select-region-container" class="card-container containers-background-color">
+        <legend>Where do you live?</legend>
+
+        <div class="select-region-container-card" data-validity="">
+            <input type="radio" id="england" class="radio-input" name="region-radio-input" value="england">
+            <label for="england" class="radio-input-label" name="region-label-element" >England</label>
+            
+            <input type="radio" id="wales" class="radio-input" name="region-radio-input" value="wales">
+            <label for="wales" class="radio-input-label" name="region-label-element">Wales</label>
+            
+            <input type="radio" id="scotland" class="radio-input" name="region-radio-input" value="scotland">
+            <label for="scotland" class="radio-input-label" name="region-label-element">Scotland</label>
+            
+            <input type="radio" id="northern-ireland" class="radio-input" name="region-radio-input" value="northernIreland">
+            <label for="northern-ireland" class="radio-input-label" name="region-label-element">Northern Ireland</label>
+        </div>
+    </div>
+
+    <div id="property-value-container" class="card-container containers-background-color">
+        <label class="card-title" for="property-value-input">How much is your property currently worth?</label>
+        <span class="card-help-text">This is how much you think your property is worth now, not when you bought it. If you’re unsure, give us your best estimate.</span>
+
+        <div class="card-input-container">
+            <span class="card-input-container-label">£</span>
+            <input type="number" id="property-value-input" class="card-input-container-input-field" required>
+        </div>
+    </div>
+
+    <div id="mortgage-details" class="card-container containers-background-color">
+        <label class="card-title" for="mortgage-amount-value">How much do you have left to pay on your mortgage?</label>
+        <span class="card-help-text">You can find this on your most recent mortgage statement or from your lender’s website. If you’re still not sure, give us your best estimate.</span>
+        
+        <div class="card-input-container">
+            <span class="card-input-container-label">£</span>
+            <input type="number" id="mortgage-amount-value" class="card-input-container-input-field" required>
+        </div>
+    </div>
+
+    <div id="mortgage-term" class="card-container containers-background-color">
+        <label class="card-title" for="mortgage-term-value">To the nearest year, how many years remain on your mortgage?</label>
+        <span class="card-help-text">You should round any months to the nearest year - so round down if it’s less than six months, and round up if it’s more than six months.</span>
+
+        <div class="card-input-container">
+            <input type="number" id="mortgage-term-value" class="card-input-container-input-field" required>
+            <span id="mortgage-term-input-label">years</span>
+        </div>
+    </div>
+
+    <div id="mortgage-preferences-info-container" class="repayment-method-card containers-background-color">
+        The options that you select from this point onwards can be edited at the top of the results page.
+    </div>
+
+    <div id="repayment-method" class="repayment-method-card containers-background-color">
+        <legend>How would you like to repay your mortgage?</legend>
+
+        
+        <span class="card-help-text">This includes capital & interest payments. The total amount you have borrowed will be paid off by the end of your term.</span>
+
+        <div class="repayment-method-container">
+            <input type="radio" name="repayment-method" id="repayment" class="radio-input" value="repayment" required>
+            <label for="repayment" class="repayment-method-container-label">Repayment</label>
+        </div>
+
+        <span class="card-help-text">This includes interest payments only. The total amount you have borrowed will not be reduced.</span>
+
+        <div class="repayment-method-container">
+            <input type="radio" name="repayment-method" id="interest-only" class="radio-input" value="interestOnly" required>
+            <label for="interest-only" class="repayment-method-container-label">Interest Only</label>
+        </div>
+    </div>
+
+    <div id="mortgage-type" class="repayment-method-card containers-background-color">
+        <legend>What type of mortgage are you looking for?</legend>
+
+        <span class="card-help-text">This includes a fixed term during which your monthly payments will not change.</span>
+
+        <div class="repayment-method-container">
+            <input type="radio" name="mortgage-type" id="fixed-rate" class="radio-input" value="fixed">
+            <label for="fixed-rate" class="repayment-method-container-label">Fixed Rate</label>
+        </div>
+
+        <span class="card-help-text">The rate and monthly costs for this type of mortgage may change.</span>
+
+        <div class="repayment-method-container">
+            <input type="radio" name="mortgage-type" id="variable-rate" class="radio-input" value="variable">
+            <label for="variable-rate" class="repayment-method-container-label">Variable Rate</label>
+        </div>
+    </div>
+
+    <div id="term-deal" class="repayment-method-card containers-background-color">
+        <legend>What initial deal term are you looking for?</legend>
+        <span class="card-help-text">This is the period for which an initial fixed or variable rate would apply.</span>
+
+        <div class="repayment-method-container">
+            <input type="radio" name="term-deal" id="2years" class="radio-input" value="twoYears">
+            <label for="2years" class="repayment-method-container-label">2 years</label>
+        </div>
+
+        <div class="repayment-method-container">   
+            <input type="radio" name="term-deal" id="3years" class="radio-input" value="threeYears">
+            <label for="3years" class="repayment-method-container-label">3 years</label>
+        </div>
+
+        <div class="repayment-method-container">
+            <input type="radio" name="term-deal" id="5years" class="radio-input" value="fiveYears">
+            <label for="5years" class="repayment-method-container-label">5 years</label>
+        </div>
+
+        <div class="repayment-method-container">
+            <input type="radio" name="term-deal" id="10years" class="radio-input" value="tenYears">
+            <label for="10years" class="repayment-method-container-label">10 years</label>
+        </div>
+    </div>
+
+    <div id="results-button-container" class="results-button-container">
+        <a href="results.html">
+            <button type="button" id="results-button">See mortgage results
+                <i class="fa-solid fa-arrow-right"></i> 
+           </button>
+        </a>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>

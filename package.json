@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "axios": "^1.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "name": "uk-mortgage-search",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": " node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
